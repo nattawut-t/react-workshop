@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "react",
+    // supports ES6
+    "es2015",
+    // suports arrow funciton and others advances of ES6
+    "stage-0"
+  ],
+  "plugins": [
+  ]
+}
