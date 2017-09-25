@@ -129,13 +129,14 @@ class App extends Component {
       <MuiThemeProvider>
         <form onSubmit={this.handleSubmit}>
           <div className="post-preview">
+            <div className="clearfix" >&nbsp;</div>
             <div className="row">
               <div className="col-4">
-                <h3 className="post-subtitle">
+                <h4 className="post-subtitle">
                   Username:
-            </h3>
+                </h4>
               </div>
-              <h2 className="col-8">
+              <div className="col-8">
                 <TextField
                   id="username"
                   name="username"
@@ -145,16 +146,16 @@ class App extends Component {
                   onChange={e => this.handleChange(e)}
                   fullWidth
                 />
-              </h2>
+              </div>
             </div>
             <div className="clearfix" >&nbsp;</div>
             <div className="row">
               <div className="col-4">
-                <h3 className="post-subtitle">
+                <h4 className="post-subtitle">
                   First name:
-            </h3>
+                </h4>
               </div>
-              <h2 className="col-8">
+              <div className="col-8">
                 <TextField
                   id="firstName"
                   name="firstName"
@@ -164,16 +165,16 @@ class App extends Component {
                   onChange={e => this.handleChange(e)}
                   fullWidth
                 />
-              </h2>
+              </div>
             </div>
             <div className="clearfix" >&nbsp;</div>
             <div className="row">
               <div className="col-4">
-                <h3 className="post-subtitle">
+                <h4 className="post-subtitle">
                   Last name:
-            </h3>
+                </h4>
               </div>
-              <h2 className="col-8">
+              <div className="col-8">
                 <TextField
                   id="lastName"
                   name="lastName"
@@ -183,16 +184,16 @@ class App extends Component {
                   onChange={e => this.handleChange(e)}
                   fullWidth
                 />
-              </h2>
+              </div>
             </div>
             <div className="clearfix" >&nbsp;</div>
             <div className="row">
               <div className="col-4">
-                <h3 className="post-subtitle">
+                <h4 className="post-subtitle">
                   Email:
-            </h3>
+                </h4>
               </div>
-              <h2 className="col-8">
+              <div className="col-8">
                 <TextField
                   id="email"
                   name="email"
@@ -202,16 +203,16 @@ class App extends Component {
                   onChange={e => this.handlePatternChange(e, emailRegex)}
                   fullWidth
                 />
-              </h2>
+              </div>
             </div>
             <div className="clearfix" >&nbsp;</div>
             <div className="row">
               <div className="col-4">
-                <h3 className="post-subtitle">
+                <h4 className="post-subtitle">
                   Password:
-            </h3>
+                </h4>
               </div>
-              <h2 className="col-8">
+              <div className="col-8">
                 <TextField
                   type="password"
                   id="password"
@@ -222,7 +223,7 @@ class App extends Component {
                   onChange={e => this.handlePatternChange(e, passwordRegex)}
                   fullWidth
                 />
-              </h2>
+              </div>
             </div>
             <div className="clearfix" >&nbsp;</div>
             <div
