@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Component from '../presentations/App'
-import { fetchUser } from '../redux/modules/users'
+import { fetchUser, fetchUserCancelled } from '../redux/modules/users'
 
 const mapStateToProps = ({ users }) => ({
   payload: users.payload,
@@ -8,6 +8,7 @@ const mapStateToProps = ({ users }) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchUsers: username => dispatch(fetchUser(username)),
+  cancel: () => dispatch(fetchUserCancelled()),
 })
 
 export default connect(
