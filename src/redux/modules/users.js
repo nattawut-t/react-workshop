@@ -22,12 +22,19 @@ export const fetchUserEpic = action$ =>
 
 const users = (state = {}, action) => {
   switch (action.type) {
+    case FETCH_USER:
+      return {
+        ...state,
+        loading: true,
+      }
+
     case FETCH_USER_FULFILLED:
       console.log(FETCH_USER_FULFILLED, action)
       return {
         ...state,
         // `login` is the username
         payload: JSON.stringify(action.payload),
+        loading: false,
       }
 
     default:
