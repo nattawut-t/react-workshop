@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
+import PropTypes from 'prop-types'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 
@@ -125,8 +126,13 @@ class App extends Component {
       valid,
     } = this.state
 
+    const { fetchUsers } = this.props
+
     return (
       <MuiThemeProvider>
+        <button onClick={() => fetchUsers()}>
+          Fetch Users
+        </button>
         <form onSubmit={this.handleSubmit}>
           <div className="post-preview">
             <div className="clearfix" >&nbsp;</div>
@@ -244,6 +250,10 @@ class App extends Component {
       </MuiThemeProvider>
     )
   }
+}
+
+App.propTypes = {
+  fetchUsers: PropTypes.func.isRequired,
 }
 
 export default App
