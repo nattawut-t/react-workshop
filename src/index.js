@@ -6,6 +6,8 @@ import 'rxjs'
 import store from './redux/store'
 import App from './containers/App'
 
+import 'bootstrap/dist/css/bootstrap.css'
+
 const Root = () =>
   <Provider store={store}>
     <App />
