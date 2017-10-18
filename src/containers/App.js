@@ -2,9 +2,9 @@ import { connect } from 'react-redux'
 import Component from '../presentations/App'
 import { fetchUser, fetchUserCancelled } from '../redux/modules/users'
 
-const mapStateToProps = ({ users, loading }) => ({
+const mapStateToProps = ({ users, notification }) => ({
   payload: users.payload,
-  loading: users.loading,
+  loading: notification.loading,
 })
 
 const mapDispatchToProps = dispatch => ({

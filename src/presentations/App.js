@@ -26,7 +26,7 @@ const App = ({ fetchUsers, cancel, payload, loading }) =>
           fetchUsers('torvalds')
         }}
       >
-        Reload
+        <Icon spin name={loading ? 'circle-o-notch' : ''} size="lg" />&nbsp;Reload
       </Button>
       &nbsp;
       <Button
@@ -39,18 +39,7 @@ const App = ({ fetchUsers, cancel, payload, loading }) =>
       </Button>
     </div>
 
-    {loading
-      ? <div
-        className="col-12"
-        style={{
-          justifyContent: 'center',
-          display: 'flex',
-        }}
-      >
-        <Icon spin name="circle-o-notch" size="lg" />
-      </div>
-      : <div />
-    }
+
 
     <div
       className="col-12"

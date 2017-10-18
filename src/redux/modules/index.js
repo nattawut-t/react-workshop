@@ -1,14 +1,13 @@
 import { combineEpics } from 'redux-observable'
 import { combineReducers } from 'redux'
-// import ping, { pingEpic } from './ping'
 import users, { fetchUserEpic } from './users'
+import notification from './notification'
 
 export const rootEpic = combineEpics(
-  // pingEpic,
-  fetchUserEpic
+  fetchUserEpic,
 )
 
 export const rootReducer = combineReducers({
-  // ping,
-  users
+  users,
+  notification,
 })
